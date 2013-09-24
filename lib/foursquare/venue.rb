@@ -51,6 +51,10 @@ module Foursquare
       @json["stats"]
     end
     
+    def url
+      @json["url"]
+    end
+
     def primary_category
       return nil if categories.blank?
       @primary_category ||= categories.select { |category| category.primary? }.try(:first)
